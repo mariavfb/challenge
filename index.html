@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Decodificador</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <img src="img/mavi.svg" alt="">
+        </nav>
+    </header>
+    <main class="area">
+        <section class="digita">
+            <textarea type="text" placeholder="Digite seu texto" id="texto"></textarea> 
+
+            <div class="areaBtn">
+                <p><i class="bi bi-exclamation-circle-fill"></i>apenas frases sem acento</p>
+                <br>
+                <div class="buttons">
+                    <button class="btnCripto" onclick="exibirCriptografada()">criptografar</button>
+                    <button class="btnDescripto" onclick="exibirDescriptografada()">descriptografar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <img src="img/img-procurando.svg" alt="" id="img" class="img">
+            <h4 class="titulo" id="titulo">Nenhuma mensagem encontrada</h4>
+            <p class="subtitulo" id="subtitulo">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <p id="fraseDecodificada" style="display: none;"></p>
+            <button class="btnCopia" id="btnCopia" onclick="copiarTexto()" style="display: none;">copiar</button>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
